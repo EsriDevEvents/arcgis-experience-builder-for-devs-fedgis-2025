@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>ArcGIS Experience Builder for Developers: Widgets, Dev, Deployment, and Automation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="img/2025/fed/1.png" data-background-size="contain">
+          <h1 style="text-align: left; font-size: 36px">ArcGIS Experience Builder for Developers: Widgets, Dev, Deployment, and Automation</h1>
+          <p style="
+                text-align: left;
+                font-size: 30px;
+                color: var(--r-section-subhead-color);
+              ">
+            Shawn Goulet
+          </p>
+          <p style="text-align: left; font-size: 30px">
+            Slides: // TODO: update link
+            <a href="https://links.esri.com/2025-fedgis-arcgis-exb-for-devs"><code style="color: black;">links.esri.com/2025-fedgis-arcgis-exb-for-devs</code></a>
+          </p>
+        </section>
+        <section data-markdown data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Agenda
+  
+            - Intro to Experience Builder
+            - Custom widgets development
+            - Code collaboration
+            - Deployment
+            - Deployment automation (dev ops)
+          </script>
+        </section>
+
+        <section data-background="img/2025/fed/3.png">
+          <h2 style="text-align: left">Intro to Experience Builder</h2>
+        </section>
+
+        <section data-background="img/2025/fed/2.png">
+          <h3>What is ArcGIS Experience Builder</h3>
+            <table style="font-size: 75%">
+            <tr>
+              <td style="width: 50%">
+              <p>
+                ArcGIS Experience Builder empowers you to quickly transform
+                your data into compelling single or mulit-page web apps
+              </p>
+              <ul>
+                <li>Start with COTS templates and widgets</li>
+                <li>Extensibility offered: custom themes and widgets</li>
+              </ul>
+              </td>
+              <td>
+              <img style="vertical-align: top" src="img/presentation/exb-jsapi.png" />
+              </td>
+            </tr>
+            </table>
+        </section>
+
+        
+        <section data-background="img/2025/fed/2.png">
+          <h2>ArcGIS Experience Builder Editions</h2>
+          <table style="font-size: 60%">
+            <tr>
+              <td style="width: 50%; vertical-align: top">
+                <ul>
+                  <li>ArcGIS Online and ArcGIS Enterprise</li>
+                  <ul>
+                    <li>URL: experience.arcgis.com</li>
+                    <li>ArcGIS Enterprise 10.8.1+</li>
+                  </ul>
+                </ul>
+                <br /><br /><br />
+                <br /><br /><br />
+                <ul>
+                  <li>Developer Edition</li>
+                  <ul>
+                    <li>
+                      Download from the Developers website and install locally
+                    </li>
+                    <li>Use your ArcGIS Online/Enterprise organization</li>
+                  </ul>
+                </ul>
+              </td>
+              <td style="text-align: center">
+                <img
+                  style="max-height: 400px"
+                  src="img/presentation/experience.arcgis.com.png"
+                />
+                <img
+                  style="max-height: 400px"
+                  src="img/presentation/developers.arcgis.com.png"
+                />
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <section  data-background="img/2025/fed/2.png">
+          <h2 style="text-align: right">Custom widgets development</h2>
+        </section>
+
+        <section data-markdown data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Technologies
+
+            - React
+            - TypeScript
+            - Jimu (Experience Builder JS library)
+          </script>
+        </section>
+
+        <section  data-background="img/2025/fed/2.png">
+          <h2 style="text-align: right">Custom widget demo</h2>
+        </section>
+
+        <section data-background="img/2025/fed/2.png">
+          <h2 style="text-align: left">Code collaboration</h2>
+          <p style="text-align: left; color: var(--r-section-subhead-color)">
+            With your development team
+          </p>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Web extension repo
+
+            - Folder
+            - Within the <code style="background-color: grey;">client/</code> folder
+            - Contains a <code style="background-color: grey;">manifest.json/</code> file with the contents:
+
+            ```
+            {
+              "name": "my-web-extension-repo",
+              "type": "exb-web-extension-repo",
+              "description": "This is a sample extension repository.",
+              "copyright": "",
+              "license": ""
+            }
+            ```
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Web extension repo
+
+            - my-web-extension-repo/
+              - manifest.json
+              - themes/
+              - widgets/
+                  - my-custom-widget-1/
+                  - my-custom-widget-2/
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            More info about developing as a team:
+
+            [developers.arcgis.com/experience-builder/guide/frequently-asked-questions](https://developers.arcgis.com/experience-builder/guide/frequently-asked-questions/#AccordionItem-gca131330-89e2-4d38-8843-254404d7627e-button)
+          </script>
+        </section>
+
+        <section  data-background="img/2025/fed/2.png">
+          <h2 style="text-align: left">Deployment</h2>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Two patterns
+
+            1. ArcGIS Enterprise
+            2. Developer Edition > host on a web server
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## ArcGIS Enterprise
+
+            1. Deploy custom widgets to Experience Builder within ArcGIS Enterprise
+            2. Users within ArcGIS Enterprise can build Experiences with those custom widgets
+            3. ArcGIS Enterprise 11.0 or higher
+
+            - Documentation: [links.esri.com/exb-share-custom-widget](https://links.esri.com/exb-share-custom-widget)
+            - Detailed instructions (blog post): [links.esri.com/exb-add-custom-widgets-blog](https://links.esri.com/exb-add-custom-widgets-blog)
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Developer Edition
+
+            1. Build the Experience with your custom widgets
+            2. Download as ZIP (image below)
+            3. Unzip files
+            4. If there is any private content, add <code style="background-color: grey;">clientId/</code> to <code style="background-color: grey;">cdn/** app-string **/config.json/</code>
+            5. Host the files on a web server
+
+            ![](img/exb-download.png)
+          </script>
+        </section>
+
+        <section  data-background="img/2025/fed/2.png">
+          <h2 style="text-align: left">Deployment automation</h2>
+          <p style="text-align: left; color: var(--r-section-subhead-color)">
+            Dev ops
+          </p>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Why automation?
+
+            - Faster builds
+            - Consistent builds
+            - Test integration
+            - The "reference" application
+            - Branch deployments
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+            <script type="text/template">
+            #### How to automate
+
+            - Store the reference version of each app
+            - Auto-build using your CI/CD env of choice:
+              - GitHub Actions*
+              - Azure DevOps
+              - AWS CodePipeline
+              - GitLab Actions
+              - Jenkins
+              - Etc.
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            #### Auto-build outcomes
+
+            - Consistent outputs
+            - Easier version management (via Git branching)
+            - Quicker bug investigations (is it happening on the reference app?)
+            - More organized management of app config versions
+            - Quickly/easily share app both within & outside of team/organization
+        </script>
+      </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            #### Folder structure
+
+            - manifest.json
+            - apps/
+              - 0/
+              - 1/
+              - zero/
+              - one/
+            - widgets/
+              - custom-widget-1/
+              - custom-widget-2/
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Auto-build
+
+            - Create file:
+            <code style="background-color: grey;">.github/workflows/build-app.yml</code>
+
+            - Demo repo: [https://github.com/shawnmgoulet/experience-builder-devops-example](https://github.com/shawnmgoulet/experience-builder-devops-example)
+          </script>
+        </section>
+
+        <section data-markdown  data-background="img/2025/fed/2.png">
+          <script type="text/template">
+            ## Session Resources
+
+            |  |  |
+            | --- | --- |
+            //TODO | Code from presentation | [code](https://links.esri.com/2025-fed-uc-arcgis-exb-for-devs) |
+            | Experience Builder developer documentation | [developers.arcgis.com/experience-builder](https://developers.arcgis.com/experience-builder/) |
+            | Esri Community: Experience Builder | [community.esri.com/t5/arcgis-experience-builder/ct-p/arcgis-experience-builder](https://community.esri.com/t5/arcgis-experience-builder/ct-p/arcgis-experience-builder) |
+          </script>
+        </section>
+
+        <!-- FEEDBACK SLIDE: -->
+        <section data-markdown data-background="img/2025/fed/5.png"></section>
+
+        <!-- PRINT CERTIFICATE SLIDE: -->
+        <!-- <section data-markdown data-background="img/2025/fed/7.png" data-background-size="contain"></section> -->
+      
+        <!-- ESRI LOGO SLIDE: -->
+        <section data-markdown data-background="img/2025/fed/6.png" data-background-size="contain"></section>
+
+        <!-- <section data-markdown data-background="img/2025/fed/3.png">Slide 2</section> -->
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
