@@ -19,18 +19,18 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-background="img/2025/fed/3.png" data-background-size="contain">
+        <section data-background="img/2025/fed/1.png" data-background-size="contain">
           <h1 style="text-align: left; font-size: 36px">ArcGIS Experience Builder for Developers: Widgets, Dev, Deployment, and Automation</h1>
           <p style="
                 text-align: left;
                 font-size: 24px;
                 color: var(--r-section-subhead-color);
               ">
-            Shawn Goulet (Senior Software Develooper | Esri Professional Services | Advanced Analytics)
+            Shawn Goulet (Sr. Software Developer | Esri Professional Services)
           </p>
           <p style="text-align: left; font-size: 30px">
             Slides:
-            <a href="https://github.com/EsriDevEvents/arcgis-experience-builder-for-devs-fedgis-2025/tree/main/slides"><code style="color: black;">presentation slides</code></a>
+            <a href="https://esridevevents.github.io/arcgis-experience-builder-for-devs-fedgis-2025/slides/"><code style="color: rgb(136, 125, 125);">presentation slides</code></a>
           </p>
         </section>
         <section data-markdown data-background="img/2025/fed/2.png">
@@ -54,18 +54,17 @@
           <h3>What is ArcGIS Experience Builder</h3>
             <table style="font-size: 75%">
             <tr>
-              <td style="width: 50%">
+              <td style="width: 60%">
               <p>
-                ArcGIS Experience Builder empowers you to quickly transform
-                your data into compelling single or mulit-page web apps
+                Quickly transform your data into compelling single or mulit-page web apps
               </p>
               <ul>
-                <li>Start with COTS templates and widgets</li>
-                <li>Extensibility offered: custom themes and widgets</li>
+                <li>Foundation: COTS templates and widgets</li>
+                <li>Extensibility: custom themes and widgets</li>
               </ul>
               </td>
               <td>
-              <img style="vertical-align: top" src="img/presentation/exb-jsapi.png" />
+              <img style="vertical-align: top" src="img/presentation/exb-jsapi.png" aria-label="exb-jsapi" />
               </td>
             </tr>
             </table>
@@ -73,14 +72,14 @@
 
         
         <section data-background="img/2025/fed/2.png">
-          <h2>ArcGIS Experience Builder Editions</h2>
+          <h3>ArcGIS Experience Builder Editions</h3>
           <table style="font-size: 60%">
             <tr>
               <td style="width: 50%; vertical-align: top">
                 <ul>
                   <li>ArcGIS Online and ArcGIS Enterprise</li>
                   <ul>
-                    <li>URL: experience.arcgis.com</li>
+                    <li>URL: <a href="https://experience.arcgis.com" target="_blank" rel="noopener">experience.arcgis.com</a></li>
                     <li>ArcGIS Enterprise 10.8.1+</li>
                   </ul>
                 </ul>
@@ -90,7 +89,7 @@
                   <li>Developer Edition</li>
                   <ul>
                     <li>
-                      Download from the Developers website and install locally
+                      Download from the <a href="https://developers.arcgis.com/experience-builder/guide/downloads/" target="_blank" rel="noopener">Downloads page</a> and install locally
                     </li>
                     <li>Use your ArcGIS Online/Enterprise organization</li>
                   </ul>
@@ -100,10 +99,12 @@
                 <img
                   style="max-height: 400px"
                   src="img/presentation/experience.arcgis.com.png"
+                  aria-label="experience.arcgis.com"
                 />
                 <img
                   style="max-height: 400px"
                   src="img/presentation/developers.arcgis.com.png"
+                  aria-label="developers.arcgis.com"
                 />
               </td>
             </tr>
@@ -116,7 +117,7 @@
 
         <section data-markdown data-background="img/2025/fed/2.png">
           <script type="text/template">
-            ## Technologies
+            ### Technologies
 
             - React
             - TypeScript
@@ -129,7 +130,7 @@
         </section>
 
         <section  data-background="img/2025/fed/3.png">
-          <h2 style="text-align: right">Custom theme development</h2>
+          <h2 style="text-align: left">Custom theme development</h2>
         </section>
 
         <section  data-background="img/2025/fed/2.png">
@@ -139,7 +140,7 @@
         <section data-background="img/2025/fed/3.png">
           <h2 style="text-align: left">Code collaboration</h2>
           <p style="text-align: left; color: var(--r-section-subhead-color)">
-            With your development team
+            Working with your development team
           </p>
         </section>
 
@@ -190,7 +191,7 @@
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            ## Two patterns
+            ### Two patterns
 
             1. ArcGIS Enterprise
             2. Developer Edition > host on a web server
@@ -199,28 +200,27 @@
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            ## ArcGIS Enterprise
+            ### ArcGIS Enterprise
 
             1. Deploy custom widgets to Experience Builder within ArcGIS Enterprise
             2. Users within ArcGIS Enterprise can build Experiences with those custom widgets
-            3. ArcGIS Enterprise 11.0 or higher
+            3. Requires ArcGIS Enterprise 11.0+
 
-            - Documentation: [links.esri.com/exb-share-custom-widget](https://links.esri.com/exb-share-custom-widget)
-            - Detailed instructions (blog post): [links.esri.com/exb-add-custom-widgets-blog](https://links.esri.com/exb-add-custom-widgets-blog)
+            - Documentation: [Add custom widgets](https://doc.arcgis.com/en/experience-builder/11.0/configure-widgets/add-custom-widgets.htm)
+            - Detailed instructions (blog post): [Add Experience Builder Custom Widgets In ArcGIS Enterprise](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/developers/add-experience-builder-custom-widgets-in-arcgis-enterprise/)
           </script>
         </section>
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            ## Developer Edition
+            ### Developer Edition
 
             1. Build the Experience with your custom widgets
-            2. Download as ZIP (image below)
-            3. Unzip files
+            2. Download as ZIP (image below) and unzip files
             4. If there is any private content, add <code style="background-color: grey;">clientId/</code> to <code style="background-color: grey;">cdn/** app-string **/config.json/</code>
             5. Host the files on a web server
 
-            ![](img/exb-download.png)
+            ![](img/presentation/exb-download.png)
           </script>
         </section>
 
@@ -233,34 +233,32 @@
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            ## Why automation?
+            ### Why automation?
 
             - Faster builds
             - Consistent builds
             - Test integration
-            - The "reference" application
             - Branch deployments
           </script>
         </section>
 
         <section data-markdown  data-background="img/2025/fed/2.png">
             <script type="text/template">
-            #### How to automate
+            ### How to automate
 
             - Store the reference version of each app
-            - Auto-build using your CI/CD env of choice:
+            - Auto-build using your CI/CD env of choice (examples below):
               - GitHub Actions*
               - Azure DevOps
               - AWS CodePipeline
               - GitLab Actions
               - Jenkins
-              - Etc.
           </script>
         </section>
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            #### Auto-build outcomes
+            ### Auto-build outcomes
 
             - Consistent outputs
             - Easier version management (via Git branching)
@@ -272,7 +270,7 @@
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            #### Folder structure
+            ### Folder structure
 
             - manifest.json
             - apps/
@@ -288,7 +286,7 @@
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            ## Auto-build
+            ## Auto-build (GitHub Actions)
 
             - Create file:
             <code style="background-color: grey;">.github/workflows/build-app.yml</code>
@@ -299,13 +297,13 @@
 
         <section data-markdown  data-background="img/2025/fed/2.png">
           <script type="text/template">
-            ## Session Resources
+            ### Session Resources
 
             |  |  |
             | --- | --- |
-            | Code from presentation | [code](https://github.com/EsriDevEvents/arcgis-experience-builder-for-devs-fedgis-2025/tree/main/code/) |
-            | Experience Builder developer documentation | [developers.arcgis.com/experience-builder](https://developers.arcgis.com/experience-builder/) |
-            | Esri Community: Experience Builder | [community.esri.com/t5/arcgis-experience-builder/ct-p/arcgis-experience-builder](https://community.esri.com/t5/arcgis-experience-builder/ct-p/arcgis-experience-builder) |
+            | Code | [Code from this session](https://github.com/EsriDevEvents/arcgis-experience-builder-for-devs-fedgis-2025/tree/main/code/) |
+            | Documentation | [ArcGIS Experience Builder documentation](https://developers.arcgis.com/experience-builder/) |
+            | Esri Community | [ArcGIS Experience Builder questions](https://community.esri.com/t5/arcgis-experience-builder-questions/bd-p/arcgis-experience-builder-questions) |
           </script>
         </section>
 
